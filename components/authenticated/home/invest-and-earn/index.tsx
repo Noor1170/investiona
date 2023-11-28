@@ -54,7 +54,7 @@ const Save = (props: SaveProps) => {
     >
       <div className="flex flex-col sm:flex-row items-center gap-1 w-full justify-between px-3">
         <div className="flex flex-col gap-1 w-full sm:items-center">
-          <div className={`text-xs font-medium`}>Investment Balance</div>
+          <div className={`text-xs font-medium`}>Solde d'investissement</div>
 
           <div
             className={`font-bold text-3xl sm:text-4xl  
@@ -66,7 +66,7 @@ const Save = (props: SaveProps) => {
         </div>
 
         <div className="flex flex-col gap-1 w-full sm:items-center">
-          <div className={`text-xs font-medium`}>Profit Balance</div>
+          <div className={`text-xs font-medium`}>Solde des bénéfices</div>
 
           <div
             className={`font-bold text-3xl sm:text-4xl 
@@ -78,7 +78,7 @@ const Save = (props: SaveProps) => {
         </div>
 
         <div className="flex flex-col gap-1 w-full sm:items-center">
-          <div className={`text-xs font-medium`}>Withdrawable Balance</div>
+          <div className={`text-xs font-medium`}>Solde retirable</div>
 
           <div
             className={`font-bold text-3xl sm:text-4xl 
@@ -91,11 +91,11 @@ const Save = (props: SaveProps) => {
       </div>
 
       <div className="flex gap-2">
-        <Button onClick={() => setWithdrawModal(true)} label={"Withdraw"} />
+        <Button onClick={() => setWithdrawModal(true)} label={"retirer"} />
         <Button
           outline
           onClick={() => router.push("/home/invest-and-earn/create")}
-          label={"New Investment"}
+          label={"Nouvel investissement"}
         />
       </div>
 
@@ -117,18 +117,18 @@ const Save = (props: SaveProps) => {
         {!loading && investments.length <= 0 && (
           <div className="w-full flex justify-center items-center">
             <div className="flex justify-center flex-col items-center">
-              <AiOutlineInbox color={primaryLightColor} size={100} />
+              <AiOutlineInbox className="text-[#0285C9]"  size={100} />
               <div
                 className={`font-semibold text-lg
               ${mode === "light" ? "text-slate-700" : "text-white"}`}
               >
-                No Availaible Investment
+                Aucun investissement disponible
               </div>
               <Button
                 small
                 outline
                 onClick={() => router.push("/home/invest-and-earn/create")}
-                label={"Start New Investment"}
+                label={"Démarrer un nouvel investissement"}
               />
             </div>
           </div>

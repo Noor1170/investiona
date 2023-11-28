@@ -76,7 +76,7 @@ const Page = () => {
     ${mode === "light" ? "text-slate-700" : "text-white"}`}
     >
       <div className="text-2xl flex font-bold items-center gap-2">
-        Edit Info
+      Modifier les informations
         <FaEdit />
       </div>
 
@@ -87,7 +87,7 @@ const Page = () => {
       >
         <div className="flex items-center gap-4 flex-col sm:flex-row">
           <div className="w-full">
-            <div>Full Name</div>
+            <div>Nom et prénom</div>
             <TextInput
               value={input.fullname}
               onChange={(e) => setInput({ ...input, fullname: e.target.value })}
@@ -96,7 +96,7 @@ const Page = () => {
           </div>
 
           <div className="w-full">
-            <div>Email</div>
+            <div>E-mail</div>
             <TextInput
               disabled={true}
               value={input.email}
@@ -108,7 +108,7 @@ const Page = () => {
 
         <div className="flex items-center gap-4 flex-col sm:flex-row">
           <div className="w-full">
-            <div>User Name</div>
+            <div>Nom d'utilisateur</div>
             <TextInput
               disabled
               value={input.username}
@@ -118,7 +118,7 @@ const Page = () => {
           </div>
 
           <div className="w-full">
-            <div>Phone Number</div>
+            <div>Numéro de téléphone</div>
             <TextInput
               value={input.phoneNumber}
               onChange={(e) =>
@@ -131,7 +131,7 @@ const Page = () => {
 
         <div className="flex items-center gap-4 flex-col sm:flex-row">
           <div className="w-full">
-            <div>Date of birth</div>
+            <div>Date de naissance</div>
             <TextInput
               value={input.dateOfBirth}
               onChange={(e) =>
@@ -142,7 +142,7 @@ const Page = () => {
           </div>
 
           <div className="w-full">
-            <div>Country</div>
+            <div>Pays</div>
             <TextInput
               value={input.country}
               onChange={(e) => setInput({ ...input, country: e.target.value })}
@@ -153,7 +153,7 @@ const Page = () => {
 
         <div className="flex items-center gap-4 flex-col sm:flex-row">
           <div className="w-full">
-            <div>City/State</div>
+            <div>Ville/État</div>
             <TextInput
               value={input.city}
               onChange={(e) => setInput({ ...input, city: e.target.value })}
@@ -162,7 +162,7 @@ const Page = () => {
           </div>
 
           <div className="w-full">
-            <div>Address</div>
+            <div>Adresse</div>
             <TextInput
               value={input.address}
               onChange={(e) => setInput({ ...input, address: e.target.value })}
@@ -173,7 +173,7 @@ const Page = () => {
 
         <Button
           loading={loading}
-          label="Update Info"
+          label="Information sur la mise à jour"
           onClick={updateInfoHandler}
         />
       </div>

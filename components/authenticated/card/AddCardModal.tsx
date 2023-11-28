@@ -60,10 +60,10 @@ const AddCardModal = (props: TopUpModalProps) => {
   };
 
   return (
-    <ModalContainer title="Add card" opened={opened} onClose={onClose}>
+    <ModalContainer title="Ajouter une carte" opened={opened} onClose={onClose}>
       <div className="flex flex-col gap-3">
         <div>
-          <div>Card Number</div>
+          <div>Numéro de carte</div>
           <TextInput
             maxLength={25}
             value={input.cardNumber}
@@ -79,7 +79,7 @@ const AddCardModal = (props: TopUpModalProps) => {
 
         <div className="flex items-center justify-between gap-3">
           <div>
-            <div>Expire Date</div>
+            <div>Date d'expiration</div>
             <TextInput
               maxLength={5}
               value={input.expireDate}
@@ -89,7 +89,7 @@ const AddCardModal = (props: TopUpModalProps) => {
                   expireDate: formatExpiration(e.target.value),
                 })
               }
-              placeholder="MM/YY E.g 02/24"
+              placeholder="MM/AA Par exemple 24/02"
             />
           </div>
 
@@ -107,55 +107,55 @@ const AddCardModal = (props: TopUpModalProps) => {
         </div>
 
         <div>
-          <div>Cardholder name</div>
+          <div>Nom du titulaire</div>
           <TextInput
             value={input.cardholderName}
             onChange={(e) =>
               setInput({ ...input, cardholderName: e.target.value })
             }
-            placeholder="Name on card E.g John Doe"
+            placeholder="Nom sur la carte, par exemple John Doe"
           />
         </div>
 
         <div className="flex items-center justify-between gap-3">
           <div>
-            <div>Country</div>
+            <div>Pays</div>
             <TextInput
               value={input.country}
               onChange={(e) => setInput({ ...input, country: e.target.value })}
-              placeholder="Enter your country"
+              placeholder="Entrez votre pays"
             />
           </div>
 
           <div>
-            <div>City/State</div>
+            <div>Ville/État</div>
             <TextInput
               value={input.city}
               onChange={(e) => setInput({ ...input, city: e.target.value })}
-              placeholder="E.g New York"
+              placeholder="Par exemple New York"
             />
           </div>
         </div>
 
         <div>
-          <div>Street Address</div>
+          <div>Adresse de la rue</div>
           <TextInput
             value={input.address}
             onChange={(e) => setInput({ ...input, address: e.target.value })}
-            placeholder="E.g No. 10 Minivan street"
+            placeholder="Par exemple, rue Minivan n ° 10"
           />
         </div>
 
         <div>
-          <div>Postalcode/Zipcode</div>
+          <div>Code postal / Code postal</div>
           <TextInput
             value={input.zipCode}
             onChange={(e) => setInput({ ...input, zipCode: e.target.value })}
-            placeholder="E.g 40032"
+            placeholder="Par exemple 40032"
           />
         </div>
 
-        <Button loading={loading} label="Add Card" onClick={addCardHandler} />
+        <Button loading={loading} label="Ajouter une carte" onClick={addCardHandler} />
       </div>
     </ModalContainer>
   );

@@ -66,7 +66,7 @@ const SendMoneyModal = (props: TopUpModalProps) => {
     >
       <div className="flex flex-col gap-7">
         <div className="flex w-full justify-center">
-          {Icon && <Icon color={primaryLightColor} size={24} />}
+          {Icon && <Icon className="text-[#2F91CF]" size={24} />}
         </div>
 
         <TextInput
@@ -75,7 +75,7 @@ const SendMoneyModal = (props: TopUpModalProps) => {
             if (isNaN(Number(e.target.value))) return;
             setPaymentData({ ...paymentData, amount: e.target.value });
           }}
-          placeholder="Enter amount to send"
+          placeholder="Entrez le montant à envoyer"
           icon={AiFillDollarCircle}
         />
 
@@ -86,7 +86,7 @@ const SendMoneyModal = (props: TopUpModalProps) => {
               onChange={(e) =>
                 setPaymentData({ ...paymentData, coinName: e.target.value })
               }
-              placeholder="Enter Coin Name. E.g BTC, USDT(trc20)"
+              placeholder="Entrez le nom de la pièce. Par exemple BTC, USDT (trc20)"
             />
 
             <TextInput
@@ -97,12 +97,12 @@ const SendMoneyModal = (props: TopUpModalProps) => {
                   walletAddress: e.target.value,
                 })
               }
-              placeholder="Enter Wallet Address"
+              placeholder="Entrez l'adresse du portefeuille"
             />
           </div>
         </div>
 
-        <Button loading={loading} onClick={sendMoneyHandler} label="Send" />
+        <Button loading={loading} onClick={sendMoneyHandler} label="envoyer" />
       </div>
     </ModalContainer>
   );
